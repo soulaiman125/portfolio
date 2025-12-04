@@ -8,7 +8,7 @@
     name="description"
     content="Soulaiman El Boti — Full Stack Developer. HTML, CSS, JavaScript, React, Java, MySQL."
   />
-  <link rel="stylesheet" href="./Css/style.css" />
+  <link rel="stylesheet" href="css/style.css" />
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
     rel="stylesheet"
@@ -21,7 +21,7 @@
     <div class="nav-inner container">
       <a class="brand" href="#hero">Soulaiman El Boti</a>
 
-      <button id="theme-toggle" class="theme-btn" aria-label="Toggle light and dark theme">
+      <button id="theme-toggle" class="theme-btn" aria-label="Toggle light and dark theme" type="button">
         🌙
       </button>
 
@@ -31,6 +31,7 @@
         aria-label="Toggle navigation menu"
         aria-expanded="false"
         aria-controls="nav-links"
+        type="button"
       >
         ☰
       </button>
@@ -38,7 +39,9 @@
       <ul class="nav-links" id="nav-links">
         <li><a href="#hero" class="nav-link">Home</a></li>
         <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
         <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#certificates" class="nav-link">Certificates</a></li>
         <li><a href="#projects" class="nav-link">Projects</a></li>
         <li><a href="#languages" class="nav-link">Languages</a></li>
         <li><a href="#contact" class="nav-link">Contact</a></li>
@@ -107,6 +110,45 @@
   </section>
 
 
+  <!-- EDUCATION -->
+  <section id="education" class="section container">
+    <h2>Academic Background</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <h3>Third-year University Studies</h3>
+          <p class="timeline-location">Abdelmalek Essaadi University</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <h3>Diploma in IT</h3>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <h3>Diploma in Thermal Engineering</h3>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <h3>Diploma in Physical and Sports Education</h3>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <h3>Baccalaureate in Physical Sciences</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
   <!-- SKILLS -->
   <section id="skills" class="section container">
     <h2>Skills</h2>
@@ -122,6 +164,58 @@
       <div class="skill">Problem Solving</div>
       <div class="skill">Leadership</div>
       <div class="skill">Responsibility</div>
+      <div class="skill">Professionalism and Discipline</div>
+      <div class="skill">Time Management</div>
+      <div class="skill">Conflict Management and Resolution</div>
+    </div>
+  </section>
+
+
+  <!-- CERTIFICATES -->
+  <section id="certificates" class="section container">
+    <h2>Certificates</h2>
+    <div class="certificate-grid">
+      <div class="certificate-card">
+        <div class="certificate-icon">🎓</div>
+        <h3>British Council Certificates</h3>
+      </div>
+      <div class="certificate-card">
+        <div class="certificate-icon">🇬🇧</div>
+        <h3>English Certificate</h3>
+        <p class="certificate-level">Level B2</p>
+      </div>
+      <div class="certificate-card">
+        <div class="certificate-icon">🎨</div>
+        <h3>Graphic Design Certificate</h3>
+      </div>
+      <div class="certificate-card">
+        <div class="certificate-icon">📊</div>
+        <h3>Digital Marketing Certificate</h3>
+      </div>
+      <div class="certificate-card">
+        <div class="certificate-icon">🤝</div>
+        <h3>Workshops Program Certificate</h3>
+        <p class="certificate-org">Association of Friendship Links</p>
+      </div>
+      <div class="certificate-card">
+        <div class="certificate-icon">✨</div>
+        <h3>"Awrach" Program Certificate</h3>
+      </div>
+      <div class="certificate-card">
+        <div class="certificate-icon">📈</div>
+        <h3>Data Analysis Certificate</h3>
+        <p class="certificate-org">Simplilearn</p>
+      </div>
+      <div class="certificate-card">
+        <div class="certificate-icon">🔒</div>
+        <h3>Cybersecurity Awareness Certificate</h3>
+        <p class="certificate-org">HP LIFE</p>
+      </div>
+      <div class="certificate-card">
+        <div class="certificate-icon">🤖</div>
+        <h3>Artificial Intelligence Certificate</h3>
+        <p class="certificate-org">HP LIFE</p>
+      </div>
     </div>
   </section>
 
@@ -180,11 +274,53 @@
   <!-- LANGUAGES -->
   <section id="languages" class="section container">
     <h2>Languages</h2>
-    <ul>
-      <li>🟦 English</li>
-      <li>🇫🇷 French</li>
-      <li>🇲🇦 Arabic (Darija & Classical)</li>
-    </ul>
+    <div class="languages-list">
+      <div class="language-item">
+        <div class="language-header">
+          <span class="language-name">🇬🇧 English</span>
+          <span class="language-level">B2</span>
+        </div>
+        <div class="language-bar">
+          <div class="language-progress" style="width: 75%"></div>
+        </div>
+      </div>
+      <div class="language-item">
+        <div class="language-header">
+          <span class="language-name">🇫🇷 French</span>
+          <span class="language-level">A2</span>
+        </div>
+        <div class="language-bar">
+          <div class="language-progress" style="width: 50%"></div>
+        </div>
+      </div>
+      <div class="language-item">
+        <div class="language-header">
+          <span class="language-name">🇲🇦 Arabic</span>
+          <span class="language-level">Native Language</span>
+        </div>
+        <div class="language-bar">
+          <div class="language-progress" style="width: 100%"></div>
+        </div>
+      </div>
+      <div class="language-item">
+        <div class="language-header">
+          <span class="language-name">🇯🇵 Japanese</span>
+          <span class="language-level">Basic Level</span>
+        </div>
+        <div class="language-bar">
+          <div class="language-progress" style="width: 25%"></div>
+        </div>
+      </div>
+      <div class="language-item">
+        <div class="language-header">
+          <span class="language-name">🇹🇷 Turkish</span>
+          <span class="language-level">Basic Level</span>
+        </div>
+        <div class="language-bar">
+          <div class="language-progress" style="width: 25%"></div>
+        </div>
+      </div>
+    </div>
   </section>
 
 

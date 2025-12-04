@@ -1,47 +1,190 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Soulaiman El Boti — CV</title>
   <link rel="stylesheet" href="css/style.css" />
   <style>
-    body {
-      background: #f3f4f6;
-      color: #111827;
-      font-family: Poppins, system-ui, sans-serif;
+    * {
+      box-sizing: border-box;
     }
+
+    body {
+      background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+      color: #111827;
+      font-family: Poppins, system-ui, -apple-system, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
     .cv-wrapper {
       max-width: 840px;
       margin: 2rem auto;
       background: #ffffff;
       border-radius: 18px;
       padding: 2.2rem 2rem;
-      box-shadow: 0 16px 40px rgba(15, 23, 42, 0.16);
+      box-shadow: 0 20px 60px rgba(15, 23, 42, 0.12);
+      transition: box-shadow 0.3s ease-out, transform 0.3s ease-out;
     }
+
+    .cv-wrapper:hover {
+      box-shadow: 0 25px 80px rgba(15, 23, 42, 0.18);
+    }
+
+    .cv-header {
+      border-bottom: 2px solid #e5e7eb;
+      padding-bottom: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
     .cv-header h1 {
       margin: 0;
-      font-size: 2rem;
+      font-size: 2.2rem;
+      color: #0f172a;
+      font-weight: 700;
+      letter-spacing: -0.02em;
     }
+
     .cv-header p {
-      margin: 0.25rem 0;
+      margin: 0.5rem 0;
+      color: #6b7280;
+      font-size: 0.95rem;
     }
+
+    .cv-header a {
+      color: #7c5cff;
+      text-decoration: none;
+      transition: color 0.2s ease;
+      font-weight: 500;
+    }
+
+    .cv-header a:hover {
+      color: #6246ea;
+      text-decoration: underline;
+    }
+
     .cv-section {
-      margin-top: 1.6rem;
+      margin-top: 1.8rem;
     }
+
     .cv-section h3 {
-      margin: 0 0 0.6rem;
-      font-size: 1.05rem;
+      margin: 0 0 1rem;
+      font-size: 1.25rem;
+      color: #0f172a;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border-left: 4px solid #7c5cff;
+      padding-left: 0.8rem;
     }
+
+    .cv-section p {
+      color: #374151;
+      margin: 0 0 1rem;
+    }
+
+    .cv-skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+    }
+
     .cv-skills span {
-      background: #eef2ff;
-      color: #312e81;
-      padding: 0.3rem 0.6rem;
-      margin: 0.2rem;
-      display: inline-block;
+      background: linear-gradient(135deg, #eef2ff 0%, #faf5ff 100%);
+      color: #4c1d95;
+      padding: 0.5rem 1rem;
       border-radius: 999px;
       font-size: 0.85rem;
+      font-weight: 500;
+      border: 1px solid #ddd6fe;
+      transition: all 0.2s ease;
+      display: inline-block;
     }
+
+    .cv-skills span:hover {
+      background: linear-gradient(135deg, #ddd6fe 0%, #e9d5ff 100%);
+      color: #4c1d95;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(124, 92, 255, 0.2);
+    }
+
+    .cv-section ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .cv-section ul li {
+      padding: 0.6rem 0 0.6rem 1.5rem;
+      position: relative;
+      color: #374151;
+    }
+
+    .cv-section ul li:before {
+      content: "▸";
+      position: absolute;
+      left: 0;
+      color: #7c5cff;
+      font-weight: bold;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .cv-wrapper {
+        margin: 1rem;
+        padding: 1.5rem 1.25rem;
+        border-radius: 12px;
+      }
+
+      .cv-header h1 {
+        font-size: 1.75rem;
+      }
+
+      .cv-section h3 {
+        font-size: 1.1rem;
+      }
+
+      .cv-skills {
+        gap: 0.6rem;
+      }
+
+      .cv-skills span {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .cv-wrapper {
+        margin: 0.5rem;
+        padding: 1.25rem 1rem;
+      }
+
+      .cv-header h1 {
+        font-size: 1.5rem;
+      }
+
+      .cv-header p {
+        font-size: 0.9rem;
+      }
+
+      .cv-section h3 {
+        font-size: 1rem;
+        margin-top: 1.2rem;
+      }
+
+      .cv-skills {
+        gap: 0.5rem;
+      }
+
+      .cv-skills span {
+        padding: 0.35rem 0.6rem;
+        font-size: 0.75rem;
+      }
+    }
+
     @media print {
       body {
         background: #ffffff;
@@ -50,6 +193,10 @@
         box-shadow: none;
         margin: 0;
         border-radius: 0;
+        max-width: 100%;
+      }
+      .cv-wrapper:hover {
+        box-shadow: none;
       }
     }
   </style>
@@ -72,6 +219,17 @@
     </section>
 
     <section class="cv-section">
+      <h3>Academic Background</h3>
+      <ul>
+        <li><strong>Third-year University Studies</strong> - Abdelmalek Essaadi University</li>
+        <li><strong>Diploma in IT</strong></li>
+        <li><strong>Diploma in Thermal Engineering</strong></li>
+        <li><strong>Diploma in Physical and Sports Education</strong></li>
+        <li><strong>Baccalaureate in Physical Sciences</strong></li>
+      </ul>
+    </section>
+
+    <section class="cv-section">
       <h3>Skills</h3>
       <div class="cv-skills">
         <span>HTML</span>
@@ -80,7 +238,41 @@
         <span>React</span>
         <span>Java</span>
         <span>MySQL</span>
+        <span>Communication</span>
+        <span>Problem Solving</span>
+        <span>Teamwork</span>
+        <span>Leadership</span>
+        <span>Responsibility</span>
+        <span>Professionalism and Discipline</span>
+        <span>Time Management</span>
+        <span>Conflict Management and Resolution</span>
       </div>
+    </section>
+
+    <section class="cv-section">
+      <h3>Certificates</h3>
+      <ul>
+        <li>British Council Certificates</li>
+        <li>English Certificate – Level B2</li>
+        <li>Graphic Design Certificate</li>
+        <li>Digital Marketing Certificate</li>
+        <li>Workshops Program Certificate – Association of Friendship Links</li>
+        <li>"Awrach" Program Certificate</li>
+        <li>Data Analysis Certificate – Simplilearn</li>
+        <li>Cybersecurity Awareness Certificate – HP LIFE</li>
+        <li>Artificial Intelligence Certificate – HP LIFE</li>
+      </ul>
+    </section>
+
+    <section class="cv-section">
+      <h3>Languages</h3>
+      <ul>
+        <li><strong>English:</strong> B2</li>
+        <li><strong>French:</strong> A2</li>
+        <li><strong>Arabic:</strong> Native Language</li>
+        <li><strong>Japanese:</strong> Basic Level</li>
+        <li><strong>Turkish:</strong> Basic Level</li>
+      </ul>
     </section>
 
     <section class="cv-section">
